@@ -23,17 +23,14 @@ jobs:
         with:
           node-version: 18
 
-      - name: Remove lock file
-        run: rm -f package-lock.json
-        
-      - name: Remove node_modules directory (if cached)
-        run: rm -rf node_modules
-      
-      - name: Install dependencies
-        run: npm install
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
