@@ -11,7 +11,7 @@
   "build": "vite build",
   "preview": "vite preview",
   "deploy": "gh-pages -d dist"
-}
+},
   "dependencies": {
     "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
